@@ -13,7 +13,7 @@ import warnings
 #import psycopg2 # not yet in environment
 warnings.filterwarnings("ignore")
 
-TODO add more elegant ways to setup paths
+#  TODO add more elegant ways to setup paths
 
 
 def load_data(
