@@ -81,8 +81,8 @@ class Auto_cluster:
         if len(np.unique(pred_labels)) >= 2:
 
             silh_co = silhouette_score(X, pred_labels)
-            #davies_co = davies_bouldin_score(X, pred_labels)
-            #calinski_co = calinski_harabasz_score (X, pred_labels)
+            davies_co = davies_bouldin_score(X, pred_labels)
+            calinski_co = calinski_harabasz_score (X, pred_labels)
 
             if true_labels is not None:
 
@@ -105,10 +105,10 @@ class Auto_cluster:
 
                 return metrics
 
-            metrics = {"Silhouette Coefficient": silh_co}
-                        # "Davies Coefficient": davies_co,
-                        # "Calinski Coefficient": calinski_co,
-                    #    "Estimated number of clusters": n_clusters_}
+            metrics = {"Silhouette Coefficient": silh_co,
+                         "Davies Coefficient": davies_co,
+                         "Calinski Coefficient": calinski_co,
+                        "Estimated number of clusters": n_clusters_}
 
             for k, v in metrics.items():
                 print("\t%s: %0.3f" % (k, v))

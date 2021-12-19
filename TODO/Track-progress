@@ -1,1 +1,3 @@
 set up paths
+add nested cv to best model selection
+average all different metrics and make a decision or just keep sillho metric?
