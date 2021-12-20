@@ -84,26 +84,26 @@ class Auto_cluster:
             davies_co = davies_bouldin_score(X, pred_labels)
             calinski_co = calinski_harabasz_score (X, pred_labels)
 
-            if true_labels is not None:
+            # if true_labels is not None:
 
-                h_score = homogeneity_score(true_labels, pred_labels)
-                c_score = completeness_score(true_labels, pred_labels)
-                vm_score = v_measure_score(true_labels, pred_labels)
-                adj_r_score = adjusted_rand_score(true_labels, pred_labels)
-                adj_mut_info_score = adjusted_mutual_info_score(true_labels, pred_labels)
+            #     h_score = homogeneity_score(true_labels, pred_labels)
+            #     c_score = completeness_score(true_labels, pred_labels)
+            #     vm_score = v_measure_score(true_labels, pred_labels)
+            #     adj_r_score = adjusted_rand_score(true_labels, pred_labels)
+            #     adj_mut_info_score = adjusted_mutual_info_score(true_labels, pred_labels)
 
-                metrics = {"Silhouette Coefficient": silh_co,
-                           "Estimated number of clusters": n_clusters_,
-                           "Homogeneity": h_score,
-                           "Completeness": c_score,
-                           "V-measure": vm_score,
-                           "Adjusted Rand Index": adj_r_score,
-                           "Adjusted Mutual Information": adj_mut_info_score}
+            #     metrics = {"Silhouette Coefficient": silh_co,
+            #                "Estimated number of clusters": n_clusters_,
+            #                "Homogeneity": h_score,
+            #                "Completeness": c_score,
+            #                "V-measure": vm_score,
+            #                "Adjusted Rand Index": adj_r_score,
+            #                "Adjusted Mutual Information": adj_mut_info_score}
 
-                for k, v in metrics.items():
-                    print("\t%s: %0.3f" % (k, v))
+            #     for k, v in metrics.items():
+            #         print("\t%s: %0.3f" % (k, v))
 
-                return metrics
+            #     return metrics
 
             metrics = {"Silhouette Coefficient": silh_co,
                          "Davies Coefficient": davies_co,
