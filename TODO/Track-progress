@@ -1,3 +1,10 @@
 set up paths
 add nested cv to best model selection
 average all different metrics and make a decision or just keep sillho metric?
+Create a pipeline. 
+    - fit and predict to whole dataset and give performance metrics
+    - perform nested cv 
+    - difference between metric and score. Silho metric and accuracy?
+    - Do i have to select models based on metrics
+    - use a multi-metric approach on Gridsearchcv parameter scoring
+    - column transformer for heterogeneos datasets in my preprocessing module
